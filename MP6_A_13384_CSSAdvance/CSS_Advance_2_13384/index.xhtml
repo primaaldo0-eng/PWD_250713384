@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- menambahkan CSS eksternal -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Formulir Pendaftaran Workshop</title>
+    <!-- Menambahkan link CSS eksternal -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Judul utama diparafrase -->
+        <h1>Formulir Pendaftaran Workshop</h1>
+        <!-- Menambahkan subtitle untuk penjelasan -->
+        <p class="subtitle">Isilah data berikut dengan lengkap untuk mendaftar sebagai peserta workshop.</p>
+
+        <form action="" method="post" enctype="multipart/form-data">
+            <!-- Menggunakan fieldset untuk pengelompokan yang lebih terstruktur -->
+            <fieldset>
+                <legend>Data Peserta</legend>
+                <table class="form-table">
+                    <tr>
+                        <td class="label-col">
+                            <label for="nama">Nama Lengkap</label>
+                        </td>
+                        <td class="input-col">
+                            <input type="text" id="nama" name="nama" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">
+                            <!--Label NIM dipertajam -->
+                            <label for="nim">Nomor Induk Mahasiswa (NIM)</label>
+                        </td>
+                        <td class="input-col">
+                            <input type="text" id="nim" name="nim" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">Jenis Kelamin</td>
+                        <td class="input-col">
+                            <!-- Pengelompokan radio dengan class styling -->
+                            <div class="radio-group">
+                                <label><input type="radio" id="laki-laki" name="jenis_kelamin" value="Laki-laki" /> Laki-laki</label>
+                                <label><input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" /> Perempuan</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">
+                            <label for="program-studi">Program Studi</label>
+                        </td>
+                        <td class="input-col">
+                            <!-- Menambahkan opsi petunjuk -->
+                            <select id="program-studi" name="program_studi">
+                                <option value="">-- Pilih Program Studi --</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Sistem Informasi">Sistem Informasi</option>
+                                <option value="Teknik Industri">Teknik Industri</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <!-- Judul section diparafrase -->
+                <legend>Pilihan Kegiatan Workshop</legend>
+                <table class="form-table">
+                    <tr>
+                        <td class="label-col">Kategori Peserta</td>
+                        <td class="input-col">
+                            <!-- "Jenis Peserta" diparafrase menjadi "Kategori Peserta" -->
+                            <div class="radio-group">
+                                <label><input type="radio" id="mahasiswa" name="jenis_peserta" value="Mahasiswa" /> Mahasiswa</label>
+                                <label><input type="radio" id="umum" name="jenis_peserta" value="Umum" /> Umum</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col" style="vertical-align: top;">Topik yang Dipilih</td>
+                        <td class="input-col">
+                            <!-- "Materi Workshop" diparafrase menjadi "Topik yang Dipilih" dan ditata vertikal -->
+                            <div class="checkbox-group vertical">
+                                <label><input type="checkbox" id="ui-ux" name="materi" value="UI/UX Design" /> UI/UX Design</label>
+                                <label><input type="checkbox" id="web-development" name="materi" value="Web Development" /> Web Development</label>
+                                <label><input type="checkbox" id="data-analysis" name="materi" value="Data Analysis" /> Data Analysis</label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>Konfirmasi &amp; Pembayaran</legend>
+                <table class="form-table">
+                    <tr>
+                        <td class="label-col" style="vertical-align: top;">
+                            <!-- "Alasan Mengikuti Workshop" diparafrase -->
+                            <label for="alasan">Harapan atau Tujuan Mengikuti</label>
+                        </td>
+                        <td class="input-col">
+                            <!-- Menambahkan placeholder -->
+                            <textarea id="alasan" name="alasan" rows="7" cols="30" placeholder="Tuliskan harapan atau tujuan kamu mengikuti workshop ini..."></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">Metode Pembayaran</td>
+                        <td class="input-col">
+                            <!-- "Jenis Pembayaran" diparafrase menjadi "Metode Pembayaran" -->
+                            <div class="radio-group">
+                                <label><input type="radio" id="qris" name="jenis_pembayaran" value="QRIS" /> QRIS</label>
+                                <label><input type="radio" id="transfer-bank" name="jenis_pembayaran" value="Transfer Bank" /> Transfer Bank</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">
+                            <!-- Label diparafrase -->
+                            <label for="bukti-pembayaran">Bukti Transfer/Pembayaran</label>
+                        </td> 
+                        <td class="input-col">
+                            <input type="file" id="bukti-pembayaran" name="bukti_pembayaran" />
+                            <!-- Menambahkan petunjuk -->
+                            <small class="hint">Unggah bukti pembayaran dalam format JPG, PNG, atau JPEG</small>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <div class="button-area">
+                <!-- Tombol submit diparafrase -->
+                <input type="submit" name="daftar" value="Daftar Sekarang" class="btn-submit" />
+                <input type="reset" value="Hapus Semua" class="btn-reset" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>

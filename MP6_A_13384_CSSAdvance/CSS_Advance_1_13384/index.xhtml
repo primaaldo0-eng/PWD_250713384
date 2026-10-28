@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- menambahkan CSS eksternal -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Formulir Pendaftaran Organisasi</title>
+    <!-- Menambahkan link CSS eksternal untuk memperindah tampilan -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Pendaftaran Organisasi</h1>
+        <!-- Menambahkan subtitle sebagai penjelasan singkat -->
+        <p class="subtitle">Silakan isi data diri dan minat Anda untuk mengikuti proses seleksi keanggotaan.</p>
+
+        <form action="" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <!-- Pengelompokan diubah dari tabel biasa menjadi fieldset bertema -->
+                <legend>Data Diri</legend>
+                <table class="form-table">
+                    <tr>
+                        <td class="label-col">
+                            <!-- Label diparafrase (Nama Lengkap) tetap dipertahankan -->
+                            <label for="nama">Nama Lengkap</label>
+                        </td>
+                        <td class="input-col">
+                            <input type="text" id="nama" name="nama" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">
+                            <!-- Penjelasan NIM dipertajam agar lebih deskriptif -->
+                            <label for="nim">Nomor Induk Mahasiswa (NIM)</label>
+                        </td>
+                        <td class="input-col">
+                            <input type="text" id="nim" name="nim" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">
+                            <label for="prodi">Program Studi</label>
+                        </td>
+                        <td class="input-col">
+                            <!-- Menambahkan pilihan kosong sebagai petunjuk pengisian -->
+                            <select id="prodi" name="prodi">
+                                <option value="">-- Pilih Program Studi --</option>
+                                <option>Informatika</option>
+                                <option>Sistem Informasi</option>
+                                <option>Teknik Industri</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">
+                            <!-- Label diparafrase agar lebih jelas -->
+                            <label for="semester">Semester Saat Ini</label>
+                        </td>
+                        <td class="input-col">
+                            <select id="semester" name="semester">
+                                <option value="">-- Pilih Semester --</option>
+                                <option>Semester 1</option>
+                                <option>Semester 2</option>
+                                <option>Semester 3</option>
+                                <option>Semester 4</option>
+                                <option>Semester 5</option>
+                                <option>Semester 6</option>
+                                <option>Semester 7</option>
+                                <option>Semester 8</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">
+                            <!-- "Alamat Email" diparafrase menjadi lebih baku -->
+                            <label for="email">Alamat Surel (E-mail)</label>
+                        </td>
+                        <td class="input-col">
+                            <input type="text" id="email" name="email" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">
+                            <!-- "Nomor Telepon" diparafrase menjadi "Nomor Ponsel" -->
+                            <label for="telepon">Nomor Ponsel</label>
+                        </td>
+                        <td class="input-col">
+                            <input type="text" id="telepon" name="telepon" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">Jenis Kelamin</td>
+                        <td class="input-col">
+                            <!-- Menggunakan grup radio dengan label terpisah dan styling class -->
+                            <div class="radio-group">
+                                <label><input type="radio" id="laki" name="jk" value="Laki-Laki" /> Laki-Laki</label>
+                                <label><input type="radio" id="perempuan" name="jk" value="Perempuan" /> Perempuan</label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <!-- Menggabungkan divisi dan pengalaman menjadi satu fieldset -->
+                <legend>Minat &amp; Keterlibatan</legend>
+                <table class="form-table">
+                    <tr>
+                        <td class="label-col">Bidang yang Diminati</td>
+                        <td class="input-col">
+                            <!-- Nama divisi diparafrase agar lebih deskriptif -->
+                            <div class="radio-group vertical">
+                                <label><input type="radio" id="acara" name="divisi" value="Acara" /> Bidang Acara</label>
+                                <label><input type="radio" id="sdm" name="divisi" value="SDM" /> Bidang Sumber Daya Manusia</label>
+                                <label><input type="radio" id="humas" name="divisi" value="Humas" /> Bidang Hubungan Masyarakat</label>
+                                <label><input type="radio" id="media" name="divisi" value="Media" /> Bidang Media &amp; Kreatif</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col" style="vertical-align: top;">Riwayat Keterlibatan</td>
+                        <td class="input-col">
+                            <!-- Struktur checkbox diperjelas dengan judul bagian -->
+                            <div class="checkbox-section">
+                                <span class="section-title">Bentuk Kegiatan</span>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" id="kepanitiaan" name="pengalaman" value="Kepanitiaan" /> Kepanitiaan</label>
+                                    <label><input type="checkbox" id="organisasi" name="pengalaman" value="Organisasi" /> Keanggotaan Organisasi</label>
+                                    <label><input type="checkbox" id="volunteer" name="pengalaman" value="Volunteer" /> Aksi Sosial/Volunteer</label>
+                                </div>
+                            </div>
+                            <div class="checkbox-section">
+                                <span class="section-title">Keterampilan yang Dimiliki</span>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" id="publicspeaking" name="kemampuan" value="Public Speaking" /> Berbicara di Depan Umum</label>
+                                    <label><input type="checkbox" id="desain" name="kemampuan" value="Desain" /> Desain Grafis</label>
+                                    <label><input type="checkbox" id="fotografi" name="kemampuan" value="Fotografi" /> Fotografi &amp; Videografi</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informasi Pendukung</legend>
+                <table class="form-table">
+                    <tr>
+                        <td class="label-col" style="vertical-align: top;">
+                            <!-- "Alasan Bergabung" diparafrase menjadi "Motivasi Bergabung" -->
+                            <label for="alasan">Motivasi Bergabung</label>
+                        </td>
+                        <td class="input-col">
+                            <!-- Menambahkan placeholder untuk memandu pengisian -->
+                            <textarea id="alasan" name="alasan" rows="8" cols="30" placeholder="Ceritakan apa yang mendorong Anda untuk bergabung dengan organisasi ini..."></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">
+                            <!-- Label diparafrase agar lebih spesifik -->
+                            <label for="cv">Berkas Lamaran (CV)</label>
+                        </td>
+                        <td class="input-col">
+                            <input type="file" id="cv" name="cv" accept="application/pdf" />
+                            <!-- Menambahkan petunjuk format berkas -->
+                            <small class="hint">Format yang diterima: .PDF (maksimal sesuai ketentuan panitia)</small>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <div class="button-area">
+                <!-- Tombol submit dan reset diberi label baru dan class untuk styling -->
+                <input type="submit" name="daftar" value="Kirim Pendaftaran" class="btn-submit" />
+                <input type="reset" value="Kosongkan Formulir" class="btn-reset" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
