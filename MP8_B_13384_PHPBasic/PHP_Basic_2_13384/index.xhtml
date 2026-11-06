@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PHP Basic 2 - Kalkulator</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 40px 16px;
+        }
+        .card {
+            max-width: 480px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 28px 32px 32px;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            font-size: 22px;
+            margin: 0 0 8px;
+            color: #1f3a5f;
+        }
+        p.desc {
+            color: #667085;
+            font-size: 14px;
+            margin: 0 0 12px;
+        }
+        label {
+            display: block;
+            margin: 14px 0 6px;
+            font-weight: bold;
+            color: #333333;
+            font-size: 14px;
+        }
+        input, select {
+            width: 100%;
+            padding: 9px 11px;
+            border: 1px solid #cfd6dd;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            background: #1f6feb;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background: #1858c4;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>Kalkulator Sederhana</h1>
+    <p class="desc">Masukkan dua angka dan pilih operasi perhitungan.</p>
+    <form action="index.php" method="post">
+        <div>
+            <label for="angka1">Angka Pertama</label>
+            <input type="text" id="angka1" name="angka1" />
+
+            <label for="angka2">Angka Kedua</label>
+            <input type="text" id="angka2" name="angka2" />
+
+            <label for="operator">Operasi</label>
+            <select id="operator" name="operator">
+                <option value="">-- Pilih Operasi --</option>
+                <option value="tambah">Penjumlahan (+)</option>
+                <option value="kurang">Pengurangan (-)</option>
+                <option value="kali">Perkalian (x)</option>
+                <option value="bagi">Pembagian (:)</option>
+            </select>
+
+            <input type="submit" name="submit" value="Hitung" />
+        </div>
+    </form>
+</div>
+</body>
+</html>
