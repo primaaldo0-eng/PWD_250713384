@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Simulasi Remote AC</title>
+  <script type="text/javascript" src="js/otherKurs.js"></script>
+  <style type="text/css">
+    body { font-family: Arial, sans-serif; }
+    .remote { border: 2px solid #333; border-radius: 10px; padding: 20px; width: 260px; }
+    .display { background: #eef; border: 1px solid #999; padding: 10px; margin-bottom: 10px; text-align: center; }
+    .suhu { font-size: 32px; font-weight: bold; }
+    .status { margin-top: 5px; font-weight: bold; }
+    .buttons input { margin: 3px; padding: 8px 12px; }
+  </style>
+</head>
+<body>
+  <h1>Simulasi Remote AC</h1>
+  <div class="remote">
+    <div class="display">
+      <div>Suhu: <span id="suhu" class="suhu">24</span> &deg;C</div>
+      <div class="status">Status: <span id="status">Normal</span></div>
+      <div>Mode: <span id="mode">Normal</span></div>
+    </div>
+    <div class="buttons">
+      <input type="button" value="Naikkan Suhu" onclick="naikkanSuhu();" />
+      <input type="button" value="Turunkan Suhu" onclick="turunkanSuhu();" />
+      <br />
+      <input type="button" value="Mode Hujan" onclick="modeHujan();" />
+      <input type="button" value="Mode Normal" onclick="modeNormal();" />
+    </div>
+  </div>
+</body>
+</html>
